@@ -1,6 +1,6 @@
 Docker Kafka
 ===============
-
+Docker image for Kafka
 
 ### How to build
 
