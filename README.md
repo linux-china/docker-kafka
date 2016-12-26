@@ -4,9 +4,14 @@ Docker image for Kafka
 
 ### How to build
 
-    docker build -t spotify/kafka:0.9.0.1 .
+    $ docker build -t spotify/kafka:0.9.0.1 .
 
-### How to use
+### How to run container
+```
+    $ docker run -p 2181:2181 -p 9092:9092  spotify/kafka:0.9.0.1
+```
+
+### How to use with docker-compose
 Please add following code in docker-compose.yml
 
 ```
