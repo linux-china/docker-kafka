@@ -27,6 +27,6 @@ services:
 ### Execute kafka script in container
 
 ```
-    $ docker exec -ti kafka_container_id /usr/bin/kafka-topics.sh --create --zookeeper 127.0.0.1:2181 --replication-factor 1 --partitions 1 --topic testTopic
-    $ docker exec -ti kafka_container_id /usr/bin/kafka-topics --list --zookeeper 127.0.0.1:2181
+    $ docker exec -ti kafka_container_id /opt/kafka_2.11-0.9.0.1/bin/kafka-topics.sh --create --zookeeper 127.0.0.1:2181 --replication-factor 1 --partitions 1 --topic testTopic
+    $ docker exec -ti kafka_container_id /opt/kafka_2.11-0.9.0.1/bin/kafka-topics --list --zookeeper 127.0.0.1:2181
 ```
