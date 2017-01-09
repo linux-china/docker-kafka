@@ -17,13 +17,22 @@ Please add following code in docker-compose.yml
 ```
 version: '2'
 services:
-  kafka:
-    image: spotify/kafka:0.10.1.1
-    ports:
-      - "2181:2181"
-      - "9092:9092"
-    environment:
-      ADVERTISED_HOST: 127.0.0.1
+   kafka:
+     image: spotify/kafka:0.10.1.1
+     ports:
+       - "2181:2181"
+       - "9092:9092"
+     environment:
+        ADVERTISED_HOST: 127.0.0.1
+   kafka-manager:
+     image: sheepkiller/kafka-manager
+     ports:
+       - "9000:9000"
+     links:
+        - kafka
+     environment:
+       APPLICATION_SECRET: 123456
+       ZK_HOSTS: kafka:2181
 ```
 
 ### Execute kafka script in container
