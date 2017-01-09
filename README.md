@@ -22,6 +22,8 @@ services:
     ports:
       - "2181:2181"
       - "9092:9092"
+    environment:
+      ADVERTISED_HOST: 127.0.0.1
 ```
 
 ### Execute kafka script in container
