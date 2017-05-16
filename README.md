@@ -4,11 +4,11 @@ Docker image for Kafka
 
 ### How to build
 
-    $ docker build -t spotify/kafka:0.10.2.0 .
+    $ docker build -t spotify/kafka:0.10.2.1 .
 
 ### How to run container
 ```
-    $ docker run -p 2181:2181 -p 9092:9092  spotify/kafka:0.10.2.0
+    $ docker run -p 2181:2181 -p 9092:9092  spotify/kafka:0.10.2.1
 ```
 
 ### How to use with docker-compose
@@ -18,7 +18,7 @@ Please add following code in docker-compose.yml
 version: '2'
 services:
    kafka:
-     image: spotify/kafka:0.10.2.0
+     image: spotify/kafka:0.10.2.1
      ports:
        - "2181:2181"
        - "9092:9092"
